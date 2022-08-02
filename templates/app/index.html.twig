@@ -4,35 +4,30 @@
 {% endblock %}
 
 {% block body %}
-	<style>
-		.example-wrapper {
-			margin: 1em auto;
-			max-width: 800px;
-			width: 95%;
-			font: 18px / 1.5 sans-serif;
-		}
-		.example-wrapper code {
-			background: #F5F5F5;
-			padding: 2px 6px;
-		}
-	</style>
 
-	<div class="example-wrapper">
-		<h1>Hello
-			{{ controller_name }}! ✅</h1>
+	<form method="POST" enctype="multipart/form-data">
+		<div class="flex justify-center">
+			<div class="mb-3 w-96 mt-20">
+				<input name="fileJson" accept="application/JSON" required class="
+																																																																																				    block
+																																																																																				    w-full
+																																																																																				    px-3
+																																																																																				    py-1.5
+																																																																																				    text-base
+																																																																																				    font-normal
+																																																																																				    text-gray-700
+																																																																																				    bg-white bg-clip-padding
+																																																																																				    border border-solid border-gray-300
+																																																																																				    rounded
+																																																																																				    transition
+																																																																																				    ease-in-out
+																																																																																				    m-0
+																																																																																				    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" type="file" id="formFile">
+				<div class="flex space-x-2 justify-end mt-5">
+					<button name="submit" type="submit" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Download PDF</button>
+				</div>
+			</div>
+		</div>
+	</form>
 
-		This friendly message is coming from:
-		<ul class="bg-yellow-500">
-			<li>Your controller at
-				<code>
-					<a href="{{ '/var/www/html/alcides-json-to-pdf-test/src/Controller/AppController.php'|file_link(0) }}">src/Controller/AppController.php</a>
-				</code>
-			</li>
-			<li>Your template at
-				<code>
-					<a href="{{ '/var/www/html/alcides-json-to-pdf-test/templates/app/index.html.twig'|file_link(0) }}">templates/app/index.html.twig</a>
-				</code>
-			</li>
-		</ul>
-	</div>
 {% endblock %}

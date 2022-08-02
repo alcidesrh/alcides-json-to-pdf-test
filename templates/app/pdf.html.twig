@@ -1,0 +1,299 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+	{# <link rel="stylesheet" type="text/css" href="{{absolute_url(asset('build/app.91dd3753.css'))}}"> #}
+	<link rel="stylesheet" type="text/css" href="http://localhost:8000/build/app.91dd3753.css">
+{% endblock %}
+
+{% block body %}
+	<style>
+		.block:before {
+			display: table;
+			content: " ";
+			box-sizing: border-box;
+		}
+		.block:after {
+			clear: both;
+			display: table;
+			content: " ";
+		}
+		/* table,
+		th,
+		td,
+		tbody,
+		thead,
+		tr {
+			border-spacing: 0;
+			border-collapse: collapse;
+			border: none;
+			border-bottom: 1px solid gray;
+		} */
+
+		#customers {
+			font-family: Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		#customers td,
+		#customers th {
+			border: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		#customers tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		#customers tr:hover {
+			background-color: #ddd;
+		}
+
+		#customers th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: #04AA6D;
+			color: white;
+		}
+	</style>
+
+	<div class="container mx-auto">
+		<div class="mt-20">{{data[0]}}
+		</div>
+
+		<div class="mt-7">
+			<div class="float-left w-1/3 font-bold text-lg pt-5">
+				{{data[2]}}
+			</div>
+			<div class="float-left w-1/3 font-black text-2xl text-center">
+				<div>
+					<label for="">{{data[1]}}</label>
+				</div>
+				<div>{{data[4]}}</div>
+			</div>
+			<div class="float-left w-1/3 text-right font-bold text-lg pt-5">{{data[3]}}</div>
+		</div>
+
+		<div class="mt-10 px-20 block">
+			<div class="float-left w-1/2">
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[5] | u.split(':')[0]}}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[5] | u.split(':')[1]}}
+					</div>
+				</div>
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[6] | u.split(':')[0]}}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[6] | u.split(':')[1]}}
+					</div>
+				</div>
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[8] | u.split(':')[0] }}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[8] | u.split(':')[1]}}
+						{{data[10]}}
+					</div>
+				</div>
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[12] | u.split(':')[0] }}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[12] | u.split(':')[1]}}
+					</div>
+				</div>
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[13] | u.split(':')[0] }}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[13] | u.split(':')[1]}}
+					</div>
+				</div>
+			</div>
+			<div class="float-left w-1/2">
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[7] | u.split(':')[0]}}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[7] | u.split(':')[1]}}
+					</div>
+				</div>
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[9] | u.split(':')[0]}}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[9] | u.split(':')[1]}}
+					</div>
+				</div>
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[11] | u.split(':')[0]}}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[11] | u.split(':')[1]}}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mt-10 px-20 block">
+			<div class="w-1/2 float-left">
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[14] | u.split(':')[0]}}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[14] | u.split(':')[1]}}
+					</div>
+				</div>
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[16] | u.split(':')[0]}}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[16] | u.split(':')[1]}}
+					</div>
+				</div>
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[18] | u.split(':')[0] }}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[18] | u.split(':')[1]}}
+					</div>
+				</div>
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[20] | u.split(':')[0] }}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[20] | u.split(':')[1]}}
+					</div>
+				</div>
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[21] | u.split(':')[0] }}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[21] | u.split(':')[1]}}
+					</div>
+				</div>
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[23] | u.split(':')[0] }}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[23] | u.split(':')[1]}}
+					</div>
+				</div>
+			</div>
+			<div class="w-1/2 float-left">
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[15] | u.split(':')[0]}}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[15] | u.split(':')[1]}}
+					</div>
+				</div>
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[17] | u.split(':')[0]}}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[17] | u.split(':')[1]}}
+					</div>
+				</div>
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[19] | u.split(':')[0]}}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[19] | u.split(':')[1]}}
+					</div>
+				</div>
+				<div class="block">
+					<div class="float-left w-full opacity-0">no data</div>
+				</div>
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[22] | u.split(':')[0]}}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[22] | u.split(':')[1]}}
+					</div>
+				</div>
+				<div class="block">
+					<div class="float-left w-1/2 text-right font-bold">
+						{{data[24] | u.split(':')[0]}}:
+					</div>
+					<div class="float-left w-1/2">
+						{{data[24] | u.split(':')[1]}}
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="overflow-x-auto relative mt-10">
+			<table id="customers">
+				<tr>
+					<th></th>
+					<th></th>
+					<th class="font-bold">{{data[26]}}</th>
+					<th class="font-bold">{{data[27]}}</th>
+					<th class="font-bold">{{data[28]}}</th>
+				</tr>
+				<tr>
+					<td class="font-bold">{{data[29]}}</td>
+					<td>{{data[30]}}</td>
+					<td></td>
+					<td>{{data[31]}}</td>
+					<td>{{data[32]}}</td>
+				</tr>
+				<tr>
+					<td class="font-bold">{{data[33]}}</td>
+					<td></td>
+					<td>{{data[34]}}</td>
+					<td>{{data[35]}}</td>
+					<td>{{data[36]}}</td>
+				</tr>
+				<tr>
+					<td class="font-bold">{{data[37]}}</td>
+					<td>{{data[38]}}</td>
+					<td>{{data[39]}}</td>
+					<td>{{data[40]}}</td>
+					<td>{{data[41]}}</td>
+				</tr>
+				<tr>
+					<td class="font-bold">{{data[42]}}</td>
+					<td></td>
+					<td>{{data[43]}}</td>
+					<td>{{data[44]}}</td>
+					<td>{{data[45]}}</td>
+				</tr>
+				<tr>
+					<td class="font-bold">{{data[46]}}</td>
+					<td></td>
+					<td>{{data[47]}}</td>
+					<td>{{data[48]}}</td>
+					<td>{{data[49]}}</td>
+				</tr>
+			</table>
+		</div>
+
+	</div>
+
+
+{% endblock %}

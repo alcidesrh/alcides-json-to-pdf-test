@@ -7,6 +7,7 @@
         "php": ">=8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "knplabs/knp-snappy-bundle": "^1.9",
         "symfony/console": "6.1.*",
         "symfony/dotenv": "6.1.*",
         "symfony/flex": "^2",
@@ -16,6 +17,7 @@
         "symfony/webpack-encore-bundle": "^1.15",
         "symfony/yaml": "6.1.*",
         "twig/extra-bundle": "^2.12|^3.0",
+        "twig/string-extra": "^3.4",
         "twig/twig": "^2.12|^3.0"
     },
     "config": {
@@ -67,7 +69,8 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "6.1.*"
+            "require": "6.1.*",
+            "docker": true
         }
     },
     "require-dev": {
